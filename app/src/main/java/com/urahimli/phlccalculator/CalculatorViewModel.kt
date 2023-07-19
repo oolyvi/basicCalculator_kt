@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 class CalculatorViewModel: ViewModel() {
 
     var state by mutableStateOf(CalculatorState())
-        private set          //colden deyise bilirsen, ancaq oxumaq ve erismek hele de qalir
+        private set          
 
     fun onAction(action: CalculatorAction) {
         when(action) {
@@ -61,7 +61,6 @@ class CalculatorViewModel: ViewModel() {
     }
 
     private fun enterDecimal() {
-        //enter decimal for number1
         if (state.operation == null &&
             !state.number1.contains(".") &&
             state.number1.isNotBlank()
@@ -71,7 +70,6 @@ class CalculatorViewModel: ViewModel() {
             )
             return
         }
-        //enter decimal for number2
         if (!state.number2.contains(".") && state.number2.isNotBlank()) {
             state = state.copy(
                 number1 = state.number2 + "."
@@ -84,7 +82,6 @@ class CalculatorViewModel: ViewModel() {
             if (state.number1.length >= MAX_NUM_LENGTH) {
                 return
             }
-            //add number 1
             state = state.copy(
                 number1 = state.number1 + number
             )
