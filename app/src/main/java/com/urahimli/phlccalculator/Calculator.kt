@@ -35,7 +35,7 @@ fun Calculator(
                 .align(Alignment.BottomCenter),
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ) {
-            //Result text
+            //result text
             Text(
                 text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
                 textAlign = TextAlign.End,
@@ -47,7 +47,7 @@ fun Calculator(
                 color = Color.White,
                 maxLines = 2
             )
-            //Buttons 1st row
+            //buttons 1st row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
@@ -57,13 +57,13 @@ fun Calculator(
                     symbol = "AC",
                     modifier = Modifier
                         .background(LightGray)
-                        .aspectRatio(2f)       //digerlerinden 2 defe boyukdur deye
+                        .aspectRatio(2f)       
                         .weight(2f),
                     onClick = {
                         onAction(CalculatorAction.Clear)
                     }
                 )
-                //Delete button
+                //delete button
                 CalculatorButton(
                     symbol = "Del",
                     modifier = Modifier
@@ -74,7 +74,7 @@ fun Calculator(
                         onAction(CalculatorAction.Delete)
                     }
                 )
-                //Divide button
+                //divide button
                 CalculatorButton(
                     symbol = "÷",
                     modifier = Modifier
@@ -86,7 +86,7 @@ fun Calculator(
                     }
                 )
             }
-            //Buttons 2nd row
+            //buttons 2nd row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
@@ -136,7 +136,7 @@ fun Calculator(
                     }
                 )
             }
-            //Buttons 3rd row
+            //buttons 3rd row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
@@ -186,7 +186,7 @@ fun Calculator(
                     }
                 )
             }
-            //Buttons 4th row
+            //buttons 4th row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
@@ -224,7 +224,7 @@ fun Calculator(
                         onAction(CalculatorAction.Number(3))
                     }
                 )
-                //multiply button
+                //adding button
                 CalculatorButton(
                     symbol = "+",
                     modifier = Modifier
@@ -236,7 +236,7 @@ fun Calculator(
                     }
                 )
             }
-            //Buttons 5th row
+            //buttons 5th row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
@@ -246,7 +246,7 @@ fun Calculator(
                     symbol = "0",
                     modifier = Modifier
                         .background(Color.DarkGray)
-                        .aspectRatio(2f)      //o birilerden 2 defe boyukdur
+                        .aspectRatio(2f)      
                         .weight(2f),
                     onClick = {
                         onAction(CalculatorAction.Number(0))
