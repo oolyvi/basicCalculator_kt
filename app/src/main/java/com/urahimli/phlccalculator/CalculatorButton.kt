@@ -27,7 +27,7 @@ fun CalculatorButton(
         Text(
             text = symbol,
             fontSize = 36.sp,
-            color = Color.White      //eger darktheme isletseydik MaterialTheme istifade etmeli idik
+            color = Color.White      
         )
     }
 }
